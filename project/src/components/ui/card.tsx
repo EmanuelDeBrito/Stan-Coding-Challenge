@@ -12,8 +12,8 @@ type Props = {
 export const Card = ({ title, image, filled, movie, serie, link }: Props) => {
     return(
         <Link href={link}>
-            <div>
-                <div className={`flex justify-center items-center w-[180px] h-[250px] bg-center bg-no-repeat ${filled ? 'bg-black/85' : 'bg-none'}`} style={{ backgroundImage: 'url('+ image +')' }}>
+            <div className="overflow-hidden">
+                <div className={`flex justify-center items-center w-full h-[300px] bg-center bg-cover bg-no-repeat ${filled ? 'bg-black/85' : 'bg-none'}`} style={{ backgroundImage: 'url('+ image +')' }}>
                     {movie &&
                         <div className="text-4xl text-white font-bold uppercase">Movies</div>                
                     }
@@ -23,7 +23,7 @@ export const Card = ({ title, image, filled, movie, serie, link }: Props) => {
                     }
                 </div>
 
-                <div className="mt-1 text-black">{title}</div>
+                <div className="max-w-[150px] mt-1 text-black truncate">{title}</div>
             </div>    
         </Link>
     )

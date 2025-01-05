@@ -9,8 +9,8 @@ export const Header = () => {
 
     return(
         <header className="flex items-center h-[70px] bg-blue-500">
-            <div className="flex-1 flex items-center max-w-3xl mx-auto">
-                <div className="flex-1 text-white text-3xl font-bold">DEMO Streaming</div>
+            <div className="flex-1 flex items-center max-w-4xl mx-auto px-5 lg:px-0">
+                <div className="flex-1 text-white text-xl font-bold md:text-3xl">DEMO Streaming</div>
 
                 <div className="flex items-center gap-4">
                     <Button label='Login' onClick={handleLoginButton} />
